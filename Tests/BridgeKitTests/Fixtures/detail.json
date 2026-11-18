@@ -1,0 +1,57 @@
+{
+  "recording": {
+    "id": "rec-1",
+    "title": "Pricing call",
+    "startedAt": 1792592658000,
+    "durationMs": 8645100,
+    "sizeBytes": 1615965673,
+    "width": 4096,
+    "height": 1728,
+    "displayName": "External Display",
+    "status": "saved",
+    "transcriptStatus": "complete",
+    "transcribedUntilMs": 8645100,
+    "thumbnailCount": 8,
+    "segmentCount": 4,
+    "fileMissing": false,
+    "hasSourceAudio": true,
+    "preview": "So the main thing",
+    "previewSource": "others",
+    "videoPath": "/Users/example/Movies/Notch Recorder/Pricing call.mp4"
+  },
+  "segments": [
+    {
+      "id": 1,
+      "source": "others",
+      "startMs": 1250,
+      "endMs": 3000,
+      "text": "So the main thing",
+      "confidence": 0.9
+    },
+    {
+      "id": 2,
+      "source": "others",
+      "startMs": 3500,
+      "endMs": 5000,
+      "text": "is the pricing page.",
+      "confidence": 0.9
+    },
+    {
+      "id": 3,
+      "source": "me",
+      "startMs": 6000,
+      "endMs": 8000,
+      "text": "Got it.",
+      "confidence": 0.95
+    },
+    {
+      "id": 4,
+      "source": "others",
+      "startMs": 20000,
+      "endMs": 21000,
+      "text": "Great.",
+      "confidence": 0.9,
+      "originalText": "Grate."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIdentifier</key>
+	<string>com.direksethi.NotchRecorder</string>
+	<key>CFBundleName</key>
+	<string>Notch Recorder</string>
+	<key>CFBundleDisplayName</key>
+	<string>Notch Recorder</string>
+	<key>CFBundleExecutable</key>
+	<string>NotchRecorder</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleVersion</key>
+	<string>__BUILD__</string>
+	<key>CFBundleIconFile</key>
+	<string>AppIcon</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>15.0</string>
+	<key>LSUIElement</key>
+	<true/>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.productivity</string>
+	<key>NSHighResolutionCapable</key>
+	<true/>
+	<key>NSSupportsAutomaticTermination</key>
+	<false/>
+	<key>NSSupportsSuddenTermination</key>
+	<false/>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Notch Recorder records and transcribes your voice while you record your screen.</string>
+	<key>NSScreenCaptureUsageDescription</key>
+	<string>Notch Recorder records your screen and the audio your Mac plays.</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.direksethi.NotchRecorder</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>notchrecorder</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

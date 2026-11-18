@@ -1,0 +1,22 @@
+{
+  "name": "notch-recorder-web",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "test": "npm test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "build": "npm run theme && npm run build -w @nr/core && npm run build -w @nr/library",
+    "theme": "node scripts/gen-theme.mjs"
+  },
+  "devDependencies": {
+    "culori": "^4.0.2",
+    "typescript": "^5.9.3"
+  },
+  "allowScripts": {
+    "esbuild": true
+  }
+}

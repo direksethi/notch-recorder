@@ -1,0 +1,135 @@
+@import "tailwindcss";
+@import "./theme.css";
+
+/* Theme colours (theme/notch-dark.json) mapped onto Tailwind colour names. */
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-row-hover: var(--sidebar-row-hover);
+  --color-sidebar-row-selected: var(--sidebar-row-selected);
+  --color-sidebar-muted: var(--sidebar-muted-foreground);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-overlay: var(--surface-overlay);
+  --color-border: var(--border);
+  --color-toolbar-border: var(--toolbar-border);
+  --color-input: var(--input);
+  --color-text: var(--text);
+  --color-muted: var(--text-muted);
+  --color-faint: var(--placeholder);
+  --color-secondary: var(--secondary);
+  --color-control: var(--toolbar-control);
+  --color-control-hover: var(--toolbar-control-hover);
+  --color-action: var(--message-action);
+  --color-action-hover: var(--message-action-hover);
+  --color-error: var(--error);
+  --color-error-foreground: var(--error-foreground);
+  --color-error-surface: var(--error-surface);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-warning-surface: var(--warning-surface);
+  --color-match: var(--search-match-background);
+  --color-match-active: var(--search-match-active-background);
+  --color-me: var(--speaker-me);
+  --color-others: var(--speaker-others);
+  --color-recording: var(--recording);
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+  --font-mono: "SF Mono", ui-monospace, Menlo, monospace;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+  overflow: hidden;
+}
+
+/* Text people read and copy can be selected; chrome cannot. */
+.selectable {
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+::selection {
+  background: color-mix(in oklch, var(--message-action) 45%, transparent);
+}
+
+:where(button, [role="link"], [role="switch"], select, a):focus-visible {
+  outline: 2px solid var(--message-action);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Thin overlay scrollbars like native macOS. */
+.scroll {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--terminal-scrollbar) transparent;
+}
+
+.toast-in {
+  animation: toast-in 180ms cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+}
+
+.fade-in {
+  animation: fade-in 140ms ease-out;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+.pop-in {
+  animation: pop-in 140ms cubic-bezier(0.2, 0.9, 0.3, 1);
+  transform-origin: top right;
+}
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toast-in,
+  .fade-in,
+  .pop-in {
+    animation: none;
+  }
+}
+
+mark {
+  background: color-mix(in oklch, var(--search-match-background) 70%, transparent);
+  color: var(--search-match-foreground);
+  border-radius: 3px;
+  padding: 0 1px;
+}
+
+video::-webkit-media-controls-panel {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.55));
+}

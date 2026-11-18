@@ -1,0 +1,22 @@
+{
+  "name": "@nr/core",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "build": "esbuild src/jsc-entry.ts --bundle --format=iife --target=es2020 --minify --outfile=dist/core.jsc.js",
+    "fixtures": "node --experimental-strip-types test/write-fixtures.ts"
+  },
+  "dependencies": {
+    "effect": "4.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "esbuild": "^0.25.0",
+    "vitest": "^3.2.4"
+  }
+}
